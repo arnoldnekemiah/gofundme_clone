@@ -1,0 +1,10 @@
+<h1>Supports</h1>
+<ul>
+  <% @supports.each do |support| %>
+    <li>
+      <a href="<%= support_path(support) %>">
+        $<%= support.amount %> to <%= support.service.title %> by <%= support.user.name %>
+      </a>
+    </li>
+  <% end %>
+</ul>

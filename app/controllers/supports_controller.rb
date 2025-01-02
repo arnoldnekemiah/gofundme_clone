@@ -1,12 +1,10 @@
 class SupportsController < ApplicationController
     def index
       @supports = Support.all
-      render json: @supports
     end
   
     def show
       @support = Support.find(params[:id])
-      render json: @support
     end
   
     def create

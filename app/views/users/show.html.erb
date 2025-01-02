@@ -1,0 +1,10 @@
+<h1><%= @user.name %></h1>
+<p>Email: <%= @user.email %></p>
+<p>Bio: <%= @user.bio %></p>
+
+<h2>Services</h2>
+<ul>
+  <% @user.services.each do |service| %>
+    <li><%= service.title %> - $<%= service.price %></li>
+  <% end %>
+</ul>

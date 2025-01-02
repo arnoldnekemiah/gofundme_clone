@@ -1,0 +1,13 @@
+<h1><%= @service.title %></h1>
+<p>Description: <%= @service.description %></p>
+<p>Price: $<%= @service.price %></p>
+<p>Provided by: <%= @service.user.name %></p>
+
+<h2>Supports</h2>
+<ul>
+  <% @service.supports.each do |support| %>
+    <li>
+      Amount: $<%= support.amount %>, Status: <%= support.status %>
+    </li>
+  <% end %>
+</ul>
